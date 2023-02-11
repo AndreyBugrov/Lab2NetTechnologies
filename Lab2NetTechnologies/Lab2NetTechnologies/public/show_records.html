@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Поиск записи</title>
+</head>
+<body>
+    <h1> Выберите один из предложенных вариантов поиска</h1>
+    <form action="./find_header" method="post" enctype="application/x-www-form-urlencoded" id="f_header", name="f_header">
+        <p> Поиск по слову в заголовке статьи </p>
+        <input type="text" id="header", name="header"/>
+        <input type="submit" value="Поиск"/>
+    </form>
+    <form action="./find_marks" method="post" enctype="application/x-www-form-urlencoded" id="f_marks" , name="f_marks">
+        <p> Поиск по метке</p>
+        <input type="text" id="marks" name="marks" />
+        <input type="submit" value="Поиск"/>
+    </form>
+    <form action="./find_text" method="post" enctype="application/x-www-form-urlencoded" id="f_text" , name="f_text">
+        <p> Поиск по слову в тексте</p>
+        <input type="text" id="_text" name="_text" />
+        <input type="submit" value="Поиск"/>
+    </form>
+</body>
+</html>

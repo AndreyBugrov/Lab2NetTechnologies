@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var btn = document.getElementById("theme-button");
+        var link = document.getElementById("theme-link");
+
+        btn.addEventListener("click", function () { ChangeTheme(); });
+
+        function ChangeTheme() {
+            let lightTheme = "styles/light.css";
+            let darkTheme = "styles/dark.css";
+
+            var currTheme = link.getAttribute("href");
+            var theme = "";
+
+            if (currTheme == lightTheme) {
+                currTheme = darkTheme;
+                theme = "dark";
+            }
+            else {
+                currTheme = lightTheme;
+                theme = "light";
+            }
+
+            link.setAttribute("href", currTheme);
+
+           // Save(theme);
+        }
+    </script>
+    <link rel="stylesheet" href="css/light_theme.css" id="theme-link">
+    <meta charset="utf-8">
+    <title> Лучшее хранилище записей</title>
+</head>
+<body>
+    <center>
+        <font face="segoe ui"> <h1> Добро пожаловать в хранилище записей!</h1> </font>
+        <font face="consolas"><p align="right"> Не ошибается тот, кто ничего не делает</p></font>
+        <button onclick="ChangeTheme()" id="theme-button" style="margin: 20px 0"> Сменить тему </button>
+        <form action="./create_record.html" method="get">
+            <button onclick="window.location.href='create_record.html'"> Создать запись</button>
+        </form><br />
+        <form action="./show_records.html" method="get">
+            <button onclick="window.location.href='show_records.html'"> Поиск записей</button>
+        </form>
+    </center>
+</body>
+</html>

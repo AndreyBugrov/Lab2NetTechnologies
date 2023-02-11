@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>found</title>
+    <meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+    <script>
+
+    </script>
+</head>
+<body>
+    <center>
+        <font face="segoe ui"> <h1>Найденные записи:</h1> </font>
+        <p>------------------------------------------<p>
+            <% for(let i =0;i<rows.length;i++){ %>
+                <font face="segoe ui"> <h2> <%=rows[i].header %></h2> </font>
+                <p> <b> Метки: </b> </p>
+                <p> <%=rows[i].marks %></p>
+                <p> <b>Текст записи: </b> </p>
+                <p><%=rows[i].text %></p>
+                <p> <b> Файлы: </b> </p>
+                <% for(let j =0;j<rows[i].files.length;j++){ %>
+                       <% ref = rows[i].files[j]%>
+                        <a href= <%=ref%> download = <%=ref%> > <%=ref%> </a>
+                    <p><% }%></p>
+                    <p>------------------------------------------<p>
+                    <p><%}%></p>
+    </center>
+</body>
+</html>

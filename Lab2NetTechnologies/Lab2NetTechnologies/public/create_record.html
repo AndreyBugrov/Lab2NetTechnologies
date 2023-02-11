@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Создание записи</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<h1> Создание записи </h1>
+	<form action="http://localhost:1337/create" method="post" enctype="multipart/form-data" id="fform">
+		<p> Введите заголовок записи </p>
+		<textarea rows="1" cols="100" id="header" name="header"></textarea> <br>
+		<p> Введите метки, разделяя их пробелом</p>
+		<textarea rows="1" cols="100" id="marks" name="marks"></textarea>
+		<p> Введите текст записи </p>
+		<textarea rows="25" cols="100" id="text" name="text"></textarea><br>
+		<input type="file" multiple id="files" name="files">
+		<input type="submit" value="Отправить"/>
+	</form>
+</body>
+</html>
